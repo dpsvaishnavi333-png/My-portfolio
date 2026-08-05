@@ -1,10 +1,16 @@
+html{
+    scroll-behavior:smooth;
+}
+section{
+    padding:80px 10%;
+}
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 body{
-    font-family:Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background:#000000;
     color:#ece5e5cf;
     line-height:1.6;
@@ -12,6 +18,9 @@ body{
 header{
     background:#2b1328;
     padding:10px;
+    position: sticky;
+    top: 0;
+     z-index: 100;
 }
 
 nav{
@@ -24,10 +33,11 @@ nav a{
     color:white;
     text-decoration:none;
     font-weight:bold;
+    transistion:.3s;
 }
 
 nav a:hover{
-    color:#00bfff;
+    color:#5c2f77;
 }
 #home{
     text-align:center;
@@ -35,11 +45,13 @@ nav a:hover{
 }
 
 #home h1{
+     font-family:sans-serif;
     font-size:48px;
+    font-weight:700;
 }
 
 #home h2{
-    color:#7b60cd;
+    color:#8167ce;
     margin:15px 0;
 }
 
@@ -50,13 +62,71 @@ nav a:hover{
 button{
     margin-top:25px;
     padding:12px 25px;
-    background:#8400ff;
-    color:white;
+    background:#341056;
+    color:rgb(200, 197, 197);
     border:none;
     border-radius:8px;
     cursor:pointer;
+    transition:.3s ease;
 }
 
 button:hover{
     background:#390679;
+    transform:scale(1.08);
+}
+#about{
+    background:#141414;
+    border-radius:15px;
+    margin:30px auto;
+    box-shadow:0 4px 12px rgba(0,0,0,0.4);
+}
+#contact{
+    background:#141414;
+    border-radius:15px;
+    margin:30px auto;
+    box-shadow:0 4px 12px rgba(0,0,0,0.4);
+}
+#skills ul{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:10px;
+    list-style:none;
+    margin-top:30px;
+}
+#skills li{
+    background:#321261e2;
+    padding:15px;
+    text-align:center;
+    border-radius:10px;
+    transition:.3s;
+    cursor:pointer;
+}
+#skills li:hover{
+    background:#7865b2;
+    transform:translateY(-5px);
+}
+#skills h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+#home h1{
+    font-size:32px;
+}
+
+#home h2{
+    font-size:22px;
+}
+
+section{
+    padding:50px 20px;
+}
+
 }
